@@ -19,7 +19,7 @@
 	"plugins": ["react", "react-hooks", "jsx-a11y"],
 	"overrides": [
 		{
-			"files":["*.jsx", "*.js"],
+			"files":["*.tsx", "*.ts"],
 			"rules": {
 				"indent": ["error","tab", {
 					"ignoredNodes": ["TemplateLiteral"]

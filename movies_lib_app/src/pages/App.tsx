@@ -21,5 +21,5 @@ const App = (): JSX.Element => {
 			</header>
 		</div>
 	);
-}
+};
 export default App;

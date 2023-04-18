@@ -1,6 +1,12 @@
 :root {
+	/** blacks */
 	--black-default: #000;
+	--black-alpha-y: #0000001E;
+	--black-alpha-x: #0000003B;
+	/** whites */
 	--white-default: #FFF;
+	/** greys */
+	--grey-default: #f2F2F2;
 }
 
 body {

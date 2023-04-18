@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
-import "./home.scss";
 import SearchBar from "../../shared/components/searchBar/searchBar";
+import MovieList from "../../shared/components/movieList/movielist";
+import "./home.scss";
 
 const Home = () => {
 	return (
@@ -8,7 +9,9 @@ const Home = () => {
 			<header className="header__wrapper">
 				<SearchBar />
 			</header>
-			<div>main content</div>
+			<main>
+				<MovieList />
+			</main>
 		</Fragment>
 	);
 };

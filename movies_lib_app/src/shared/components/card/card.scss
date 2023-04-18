@@ -1,0 +1,38 @@
+
+@mixin textEllipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  &__poster {
+    min-width: 100px;
+    width: 100%;
+    min-height: 150px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    background-color: var(--grey-default);
+  }
+  &__data {
+    margin: 10px 10px 0;
+    font-size: 0.8rem;
+  }
+  &__title {
+    @include textEllipsis;
+    margin: 0;
+    font-weight: 500;
+  }
+  &__info {
+    @include textEllipsis;
+    margin: 5px 0;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--grey-dark);
+  }
+}

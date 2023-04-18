@@ -3,10 +3,10 @@
     width: 100%;
     height: max-content;
     min-height: 10vh;
-    background-color: var(--grey-default);
+    background-color: var(--grey-light);
     box-shadow:
       0 10px 20px var(--black-alpha-y),
-      0 6px 6px var(--black-alpha-x);
+      0 3px 3px var(--black-alpha-x);
 
     @media screen and (max-width: 767.99px) {
       display: flex;

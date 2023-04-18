@@ -6,7 +6,9 @@
 	/** whites */
 	--white-default: #FFF;
 	/** greys */
-	--grey-default: #f2F2F2;
+	--grey-default: #CCC;
+	--grey-dark: #B3B3B3;
+	--grey-light: #f2F2F2;
 }
 
 body {
@@ -16,6 +18,7 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	background-color: var(--grey-light);
 }
 
 code {

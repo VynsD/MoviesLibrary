@@ -6,7 +6,7 @@ import reportWebVitals from "./utils/reportWebVitals";
 import "./index.css";
 
 const proxy = "https://cors-anywhere.herokuapp.com/";
-const endpoint = "https://api.tvmaze.com/";
+const endpoint = "https://api.tvmaze.com/shows";
 // const endpoint = "https://flyby-router-demo.herokuapp.com/";
 
 const client = new ApolloClient({
@@ -37,7 +37,7 @@ const TestQuery = () => {
 	const query = useQuery(SEARCH_SHOW, {
 		variables: { id: "girls" },
 		context: {
-			url: "shows",
+			// url: "shows",
 			fetchOptions: { method: "GET" }
 		},
 		fetchPolicy: "network-only",
@@ -91,7 +91,7 @@ root.render(
 			<App />
 			<TestQuery />
 			{/* <TestStrQuery /> */}
-		</ApolloProvider>,
+		</ApolloProvider>
 	</React.StrictMode>
 );
 

@@ -1,4 +1,4 @@
-import { Cast, Character, Person, Shows } from "./shows.models";
+import { Cast, Character, Person, Shows, Image, Schedule, Rating, Network } from "./shows.models";
 
 export type SearchBarProps = {
   setTextSearched: (textSrc: string) => void;
@@ -16,6 +16,19 @@ export type CardProps = {
 }
 export type MovieDetailProps = {
   setCastLs: (castLs: Cast[]) => void;
+}
+export type MoviePosterProps = {
+  posterImg: Image;
+}
+export type MovieWidgetProps = {
+  rating: Rating;
+  schedule: Schedule;
+}
+export type MovieDetailsProps = {
+  name: string;
+  genres: string[];
+  network: Network;
+  summary: TrustedHTML;
 }
 export type CastListProps = {
   castLs: Cast[];

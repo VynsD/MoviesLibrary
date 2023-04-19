@@ -32,38 +32,6 @@ const CastListItem = (props: CastListItemProps) => {
 };
 
 const CastList = (props: CastListProps) => {
-	// const fakeCastLs = [
-	// 	{ id: 0,
-	// 		img: "#",
-	// 		actor: { name: "Molly", surname: "Parker" },
-	// 		hero: { name: "Maureen", surname: "Robinson" }
-	// 	},
-	// 	{ id: 0,
-	// 		img: "#",
-	// 		actor: { name: "Toby", surname: "Stephens" },
-	// 		hero: { name: "Jhon", surname: "Robinson" }
-	// 	},
-	// 	{ id: 0,
-	// 		img: "#",
-	// 		actor: { name: "Maxwell", surname: "" },
-	// 		hero: { name: "Will", surname: "Robinson" }
-	// 	},
-	// 	{ id: 0,
-	// 		img: "#",
-	// 		actor: { name: "Mina", surname: "" },
-	// 		hero: { name: "Penny", surname: "Robinson" }
-	// 	},
-	// 	{ id: 0,
-	// 		img: "#",
-	// 		actor: { name: "Dawn", surname: "Estelle" },
-	// 		hero: { name: "Julie", surname: "McDougal" }
-	// 	},
-	// 	{ id: 0,
-	// 		img: "#",
-	// 		actor: { name: "Lino", surname: "Banfi" },
-	// 		hero: { name: "Max", surname: "Power" }
-	// 	}
-	// ];
 	return <Fragment>
 		<div className="cast__wrapper">
 			<div className="cast__table">

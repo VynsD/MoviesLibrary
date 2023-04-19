@@ -1,12 +1,15 @@
+@use "../../style/mixins" as mx;
+
 .movielist {
 	&__wrapper {
 		margin: 15px 20px;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		column-gap: 15px;
-		row-gap: 10px;
+		row-gap: 15px;
 
 		a {
+			// @include mx.setFlex;
 			text-decoration: none;
 			color: inherit;
 			outline: 0;
@@ -14,7 +17,7 @@
 
 		@media screen and ( max-width: 349.99px ) {
 			margin: 15px 10px;
-			row-gap: 5px;
+			column-gap: 10px;
 		}
 		@media screen and ( min-width: 525px ) {
 			grid-template-columns: repeat(3, 1fr);

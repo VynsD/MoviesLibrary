@@ -13,8 +13,9 @@
 	&__row {
 		&-wrapper {
 			display: grid;
-			grid-template-columns: 1fr 2fr 2fr;
+			grid-template-columns: 1fr repeat(2, 1.5fr);
 			column-gap: 10px;
+			justify-content: start;
 			align-items: center;
 
 			&:first-of-type {
@@ -37,12 +38,12 @@
 		}
 		&-data {
 			font-size: 0.8rem;
-			font-weight: 700;
-			color: var(--grey-dark);
+			font-weight: 500;
+			color: #A7A7A7;
 			
 			&--opc {
-				font-weight: 600;
-				opacity: 0.7;
+				font-weight: 400;
+				opacity: 0.6;
 			}
 		}
 	}

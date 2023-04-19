@@ -22,21 +22,4 @@ const routes = [
     exact: false
   }
 ]
-
-const isCurrentRoute = (routeName, history) =>
-	routeName === history.location.pathname.replace('/', '');
-
-const navigateTo = (routeName, history, isForced) => {
-	const foundRoute = routes.find(r => r.name === routeName);
-	if(foundRoute) {
-		if(!isCurrentRoute(routeName, history)) {
-			history.push({
-				pathname: foundRoute.path
-			});
-		} else if(isForced) {
-			window.location.reload();
-		}
-	}
-};
-
-export { routes, navigateTo, isCurrentRoute };
+export { routes };

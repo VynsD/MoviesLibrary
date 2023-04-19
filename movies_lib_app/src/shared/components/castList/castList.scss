@@ -36,8 +36,9 @@
 			object-fit: cover;
 		}
 		&-data {
+			font-size: 0.8rem;
 			font-weight: 700;
-			color: var(--grey-default);
+			color: var(--grey-dark);
 			
 			&--opc {
 				font-weight: 600;

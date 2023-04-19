@@ -14,11 +14,15 @@
 
 	&__icon-container,
 	&__input {
-		padding: 1em;
+		padding: 1.2em;
 		outline: none;
 		border: 0;
-		font-size: 1.2rem;
-		background-color: #E7E7E7;
+		font-size: 1rem;
+		background-color: var(--grey-medium);
+
+	&::placeholder {
+    color: #B1AFAF;
+}
 	}
 
 	&__icon {

@@ -53,13 +53,13 @@
 			flex-grow: 0;
 
 			&-ico {
-				width: 35px;
-				height: 35px;
+				@include boxSize(25px);
 			}
 		}
-		&__time {
-			width: max-content;
-			height: max-content;
+		&__info {
+			font-size: 0.7rem;
+			font-weight: 700;
+			color: darken($color: #b6b4b4, $amount: 5);
 		}
 	}
 }

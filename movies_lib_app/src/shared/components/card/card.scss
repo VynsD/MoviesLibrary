@@ -1,0 +1,45 @@
+@use "../../style/mixins" as mx;
+
+.card {
+	&__wrapper {
+		@include mx.setFlex(column, nowrap, unset, center);
+		max-width: 150px;
+	}
+	&__poster {
+		@include mx.boxSize(150px, 200px);
+		border-radius: 10px;
+		object-fit: cover;
+		background-color: var(--grey-default);
+
+		@media screen and (max-width: 349.99px) {
+			width: 140px;
+		}
+		
+		&-img {
+			@include mx.boxSize(100%);
+			object-fit: cover;
+			border-radius: 10px;
+		}
+	}
+	&__data {
+		margin: 10px 0 0 10px;
+		font-size: 0.8rem;
+	}
+	&__title {
+		@include mx.textEllipsis;
+		margin: 0;
+		font-weight: 500;
+		color: darken($color: #8B8B8B, $amount: 10);
+	}
+	&__info {
+		display: grid;
+		grid-template-columns: 0.5fr 0.2fr 0.3fr;
+		font-size: 0.7rem;
+		font-weight: 500;
+		color: var(--grey-dark);
+
+		&-genres {
+			@include mx.textEllipsis;
+		}
+	}
+}

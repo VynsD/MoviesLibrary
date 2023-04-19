@@ -1,0 +1,65 @@
+/* General*/
+@mixin boxSize($width, $height: null) {
+	@if $height != null {
+		width: $width;
+		height: $height;
+	} @else {
+		width: $width;
+		height: $width;
+	}
+}
+/* display */
+@mixin setFlex(
+	$direction: row,
+	$break: nowrap,
+	$alighHeight: center,
+	$alighWidth: center
+) {
+	display: flex;
+	flex-direction: $direction;
+	flex-wrap: $break;
+	align-items: $alighHeight;
+	justify-content: $alighWidth;
+}
+
+/* Hide */
+@mixin hideScrollBar {
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	-ms-overflow-style: none;
+}
+
+/* text */
+@mixin textEllipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* Movie Detail */
+@mixin widgetProp($subClass) {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+	color: var(--grey-default);
+	border: 1px solid var(--grey-default);
+
+	.#{$subClass} {
+		&__icon {
+			flex-grow: 0;
+
+			&-ico {
+				@include boxSize(25px);
+			}
+		}
+		&__info {
+			font-size: 0.7rem;
+			font-weight: 700;
+			color: darken($color: #b6b4b4, $amount: 5);
+		}
+	}
+}

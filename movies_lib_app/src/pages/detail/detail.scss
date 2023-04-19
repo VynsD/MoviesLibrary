@@ -1,0 +1,29 @@
+@use "../../shared/style/mixins" as mx;
+
+.detail {
+	&__wrapper {
+		@include mx.boxSize(100%);
+		display: grid;
+		grid-template-rows: 2fr 1fr repeat(2, auto);
+		position: relative;
+		background-color: var(--grey-light);
+
+		@media screen and ( min-width: 12400px ) {
+			margin: 25px 30px;
+		}
+	}
+	&__fade {
+		height: 10vh;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 999;
+		opacity: 0.7;
+		background: linear-gradient(
+			to bottom, 
+			#FFF0 0%,
+			var(--white-default) 70%
+		);
+	}
+}

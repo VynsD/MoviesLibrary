@@ -1,0 +1,76 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"react-app",
+		"plugin:react/recommended",
+		"plugin:jsx-a11y/recommended"
+	],
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 2021,
+		"sourceType": "module"
+	},
+	"plugins": ["react", "react-hooks", "jsx-a11y"],
+	"overrides": [
+		{
+			"files":["*.tsx", "*.ts"],
+			"rules": {
+				"indent": ["error","tab", {
+					"ignoredNodes": ["TemplateLiteral"]
+				}],
+				"quotes": ["error","double"],
+				"semi": ["error", "always"],
+				"comma-dangle": "error",
+				"spaced-comment": ["error", "always"],
+				"array-bracket-spacing": ["error", "always", { 
+					"singleValue": false,
+					"arraysInArrays": false,
+					"objectsInArrays": false
+				}],
+				"object-curly-spacing": ["error", "always"],
+				"eqeqeq": ["error", "always"],
+				"no-case-declarations": "off",
+				"no-prototype-builtins": "off",
+				"no-multi-str": "off",
+				"no-unused-vars": "error",
+				"no-unused-labels": "error",
+				"no-unused-expressions": "error",
+				"no-console": ["error", {
+					"allow": ["info", "warn", "error", "debug"]
+				}],
+				"jsx-a11y/media-has-caption": "warn",
+				"react/prop-types": [0],
+				"react/forbid-prop-types": "warn",
+				"react/no-unused-prop-types": "error",
+				"react/sort-prop-types": ["error",
+					{
+						"callbacksLast": true,
+						"ignoreCase": true,
+						"requiredFirst": true,
+						"sortShapeProp": true,
+						"noSortAlphabetically": true
+					}
+				],
+				"react/display-name": [0],
+				"react-hooks/rules-of-hooks": "error",
+				"react-hooks/exhaustive-deps": "off",
+				"react/jsx-key": ["error", {
+						"checkFragmentShorthand": true,
+						"checkKeyMustBeforeSpread": true 
+					}
+				]
+			}
+		}
+	],
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	}
+}

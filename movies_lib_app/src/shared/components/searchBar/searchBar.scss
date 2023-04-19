@@ -1,0 +1,41 @@
+@use "../../style/mixins" as mx;
+
+.search-bar {
+	&__wrapper {
+		@include mx.boxSize(fit-content, 5vh);
+		@include mx.setFlex;
+		max-width: 100%;
+		border-radius: 10px;
+		overflow: hidden;
+	}
+	@media screen and ( min-width >= 1440px ) {
+		border-radius: 30px;
+	}
+
+	&__icon-container,
+	&__input {
+		padding: 1.2em;
+		outline: none;
+		border: 0;
+		font-size: 1rem;
+		background-color: var(--grey-medium);
+
+		&::placeholder {
+			color: #B1AFAF;
+		}
+	}
+
+	&__icon {
+		@include mx.setFlex;
+		font-size: 2rem;
+		color: #7F7F7F;
+
+		&-container {
+			@include mx.setFlex;
+		}
+		&-img {
+			@include mx.boxSize(20px);
+			object-fit: contain;
+		}
+	}
+}

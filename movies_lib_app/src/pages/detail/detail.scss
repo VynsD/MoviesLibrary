@@ -1,0 +1,44 @@
+@use "../../shared/style/mixins" as mx;
+
+.detail {
+	&__wrapper {
+		@include mx.boxSize(100%);
+		display: grid;
+		grid-template-rows: 2fr 1fr 3fr 3fr;
+		position: relative;
+		background-color: var(--grey-light);
+		@media screen and ( max-width: 349.99px ) {
+			grid-template-rows: 2fr 1fr 3.5fr 2.5fr;
+		}
+		@media screen and ( min-width: 525px ) {
+			grid-template-rows: 2fr 1fr 2.5fr 2.5fr;
+		}
+		@media screen and ( min-width: 725px ) {
+			grid-template-rows: 2fr 1fr 1.8fr 2.5fr;
+		}
+		@media screen and ( min-width: 925px ) {
+			grid-template-rows: 2fr 1fr 1.5fr 2.5fr;
+		}
+		@media screen and ( min-width: 1100px ) {
+			grid-template-rows: 2fr 1fr 1.5fr 2.5fr;
+		}
+		@media screen and ( min-width: 12400px ) {
+			margin: 25px 30px;
+			grid-template-rows: 2fr 1fr 1.5fr 2.5fr;
+		}
+	}
+	&__fade {
+		height: 10vh;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 999;
+		opacity: 0.5;
+		background: linear-gradient(
+			to bottom, 
+			#FFF0 0%,
+			var(--white-default) 70%
+		);
+	}
+}

@@ -1,29 +1,36 @@
 import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
+import { CardProps } from "../../models/props.models";
 import "./card.scss";
 
-type CardProps = {
-	title: string;
-	img: string;
-	genre: string;
-	nation: string;
-	year: number;
-}
-
 const Card = (props: CardProps) => {
+	const { id, img, title, genre, nation, year } = props;
 	return <Fragment>
-		<div className="card__wrapper">
-			<div className="card__poster">
-				{props.img}
+		<Link
+			to={`/detail/${id}`}
+			state={{ ...props }}
+			preventScrollReset={true}
+		>
+			<div className="card__wrapper">
+				<div className="card__poster">
+					<img
+						className="card__poster-img"
+						src={img}
+						alt="film poster"
+					></img>
+				</div>
+				<div className="card__data">
+					<h4 className="card__title">
+						{title}
+					</h4>
+					<span className="card__info">
+						<span className="card__info-genres">{genre}</span>
+						<span className="card__info-nation">{`- ${nation}`}</span>
+						<span className="card__info-year">{year ? `- ${year}` : ""}</span>
+					</span>
+				</div>
 			</div>
-			<div className="card__data">
-				<h4 className="card__title">
-					{props.title}
-				</h4>
-				<span className="card__info">
-					{`${props.genre} - ${props.nation} - ${props.year}`}
-				</span>
-			</div>
-		</div>
+		</Link>
 	</Fragment>;
 };
 export default Card;

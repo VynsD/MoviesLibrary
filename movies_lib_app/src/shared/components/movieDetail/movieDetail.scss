@@ -1,0 +1,62 @@
+@use "../../style/mixins" as mx;
+
+.detail {
+	&__big-poster {
+		@include mx.boxSize(100%);
+		min-height: 200px;
+		position: relative;
+		overflow: hidden;
+		opacity: 0.6;
+	}
+	&__back-btn {
+		position: absolute;
+		top: 20px;
+		left: 15px;
+		opacity: 0.5;
+		transition:.9s ease;
+		border: none;
+		background-color: transparent;
+		cursor: pointer;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		&-ico {
+			@include mx.boxSize(30px);
+		}
+	}
+	&__widget {
+		display: flex;
+		background-color: var(--grey-light);
+
+		&-date {
+			@include mx.widgetProp(date);
+		}
+		&-rating {
+			@include mx.widgetProp(rating);
+			border-left-style: none;
+		}
+	}
+	&__data {
+		&-heading {
+			@include mx.setFlex(row, nowrap, center, space-between);
+			margin: 0 15px;
+		}
+		&-title {
+	
+		}
+		&-info {
+	
+		}
+		&-description {
+			margin: 0 15px;
+		}
+	}
+}
+
+.section-background {
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}

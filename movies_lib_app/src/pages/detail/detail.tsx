@@ -1,12 +1,17 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
+import CastList from "../../shared/components/castList/castList";
+import MovieDetail from "../../shared/components/movieDetail/movieDetail";
+import { Cast } from "../../shared/models/shows.models";
+import "./detail.scss";
 
 const DetailPage = () => {
+	const [ castLs, setCastList ] = useState([] as Cast[]);
 	return <Fragment>
-		<section>poster</section>
-		<section>date - rating</section>
-		<section>descript</section>
-		<section>cast</section>
-		{/* dissolvence */}
+		<div className="detail__wrapper">
+			<MovieDetail setCastLs={setCastList} />
+			<CastList castLs={castLs} />
+			<div className="detail__fade"></div>
+		</div>
 	</Fragment>;
 };
 export default DetailPage;

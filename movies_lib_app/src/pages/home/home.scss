@@ -1,17 +1,17 @@
+@use "../../shared/style/mixins" as mx;
+
 .header {
   &__wrapper {
-    width: 100%;
-    height: max-content;
+    @include mx.boxSize(100%, max-content);
+    @include mx.setFlex;
     min-height: 10vh;
+    position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+		z-index: 999;
     background-color: var(--grey-light);
     box-shadow:
       0 10px 20px var(--black-alpha-y),
       0 3px 3px var(--black-alpha-x);
-
-    @media screen and (max-width: 767.99px) {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
   }
 }
